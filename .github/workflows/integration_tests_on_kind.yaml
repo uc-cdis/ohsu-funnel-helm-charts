@@ -1,6 +1,10 @@
 name: Gen3 Integration Tests
 
-on: pull_request
+on:
+  pull_request:
+    paths:
+      - .github/workflows/integration_tests_on_kind.yaml
+      - charts/funnel/**
 
 jobs:
   integration_tests:
