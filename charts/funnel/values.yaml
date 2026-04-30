@@ -1,5 +1,5 @@
 image:
-  repository: quay.io/ohsu-comp-bio/funnel
+  repository: quay.io/ohsu-comp-bio/TRIGGER-FAILURE
   pullPolicy: Always
   initContainers:
     # Plugin Init Container
