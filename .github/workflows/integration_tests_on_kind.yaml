@@ -6,6 +6,12 @@ on:
       - .github/workflows/integration_tests_on_kind.yaml
       - charts/funnel/**
 
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+  issues: write
+
 jobs:
   integration_tests:
     name: Integration tests
