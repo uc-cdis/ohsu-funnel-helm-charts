@@ -54,7 +54,7 @@ spec:
       {{- end }}
       containers:
         - name: funnel
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          image: "quay.io/cdis/fence:master"
           imagePullPolicy: Always
           command:
             - 'funnel'
