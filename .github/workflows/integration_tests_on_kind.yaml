@@ -15,7 +15,7 @@ permissions:
 jobs:
   integration_tests:
     name: Integration tests
-    uses: uc-cdis/.github/.github/workflows/integration_tests.yaml@support-kind-debug  # TODO remove pin
+    uses: uc-cdis/.github/.github/workflows/integration_tests.yaml@support-kind  # TODO remove pin
     with:
       EXTERNAL_TO_CTDS: "true"
       SERVICE_TO_TEST: gen3_workflow
