@@ -84,7 +84,7 @@ spec:
       restartPolicy: {{ .Values.Kubernetes.Executor.restartPolicy }}
       serviceAccountName: {{`{{.ServiceAccountName}}`}}
       containers:
-      - name: funnel-worker-{{`{{.TaskId}}`}}
+      - name: funnel-executor-{{`{{.TaskId}}`}}
         image: {{`{{.Image}}`}}
         imagePullPolicy: Always
         
