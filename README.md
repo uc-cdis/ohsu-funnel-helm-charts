@@ -14,7 +14,7 @@ Helm charts for deploying various projects on any kubernetes cluster.
 
 ## TL;DR ⚡
 ```
-helm repo add ohsu https://ohsu-comp-bio.github.io/helm-charts
+helm repo add ohsu https://calypr.org/helm-charts
 helm repo update ohsu
 
 # Install GRIP
