@@ -3,9 +3,9 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: funnel-worker-config-{{`{{ .TaskId }}`}}
-  namespace: {{ .Release.Namespace }} 
+  namespace: {{`{{ .Namespace }}`}}
   labels:
     app: funnel
 data:
   funnel-worker.yaml: |
-{{`{{ .Data | indent 4 }}`}}
+{{`{{ .Config | indent 4}}`}}
