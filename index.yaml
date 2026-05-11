@@ -165,6 +165,27 @@ entries:
     - https://github.com/uc-cdis/ohsu-funnel-helm-charts/releases/download/funnel-0.1.99-rc.33/funnel-0.1.99-rc.33.tgz
     version: 0.1.99-rc.33
   - apiVersion: v2
+    appVersion: 2026-05-06.1
+    created: "2026-05-11T19:41:25.378149463Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 11.9.13
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.9.4
+    description: A toolkit for distributed task execution ⚙️
+    digest: c9a6f7bbbaaff8a47026612cc196a47bc6c033682f52b879493e41f03f635be2
+    keywords:
+    - funnel
+    name: funnel
+    type: application
+    urls:
+    - https://github.com/uc-cdis/ohsu-funnel-helm-charts/releases/download/funnel-0.1.99-rc.33/funnel-0.1.99-rc.33.tgz
+    version: 0.1.99-rc.33
+  - apiVersion: v2
     appVersion: 2026-04-29.1
     created: "2026-05-04T20:53:57.602069117Z"
     dependencies:
@@ -1666,4 +1687,4 @@ entries:
     urls:
     - https://github.com/uc-cdis/ohsu-funnel-helm-charts/releases/download/timeout-tester-0.1.2/timeout-tester-0.1.2.tgz
     version: 0.1.2
-generated: "2026-05-06T21:22:49.895432936Z"
+generated: "2026-05-11T19:41:25.37861162Z"
