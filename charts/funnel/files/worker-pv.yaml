@@ -14,8 +14,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   mountOptions:
-    # Testing:
-    # - allow-delete
+    - allow-delete
     - allow-overwrite # allow overwriting existing files
     - incremental-upload # allow appending to existing files
     - allow-other # allow non-root users to access the mounted directory
