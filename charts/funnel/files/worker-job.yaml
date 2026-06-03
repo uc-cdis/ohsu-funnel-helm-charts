@@ -75,6 +75,16 @@ spec:
 
       serviceAccountName: {{`{{.ServiceAccountName}}`}}
       restartPolicy: {{ .Values.Kubernetes.Worker.restartPolicy }}
+      initContainers:
+      - name: wait-for-pv
+        image: {{`{{.Image}}`}}
+        pullPolicy: Always
+        command:
+        - /bin/sh
+        - -c
+        args:
+        - |
+          mountPath=/opt/funnel/funnel-work-dir/{{.TaskId}} && until touch $mountPath/.probe 2>/dev/null; do echo "waiting for $mountPath to be writable..."; sleep 1; done && rm -f $mountPath/.probe
       containers:
       - name: funnel-worker-{{`{{.TaskId}}`}}
         image: {{`{{.Image}}`}}
